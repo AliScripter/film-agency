@@ -1,0 +1,162 @@
+/*! After Installation Tailwind V4 */
+/* Tailwind  */
+@import 'tailwindcss';
+@theme {
+  --color-blue: #02a8ff;
+  --color-green: #05b178;
+  --color-yellow: #fad01d;
+  --color-orange: #f84616;
+  --color-purple: #7e2fd3;
+  --color-red: #f81616;
+  --color-neutral-1: #fefefe;
+  --color-neutral-2: #f3f5f7;
+  --color-neutral-3: #e8ecef;
+  --color-neutral-4: #6c7275;
+  --color-neutral-5: #343839;
+  --color-neutral-6: #232627;
+  --color-neutral-7: #141718;
+
+  --font-hero: 'DM Serif Display', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --font-weight-regular: 400;
+  --font-weight-semi: 600;
+  --font-weight-bold: 700;
+
+  --text-hairline: 20px;
+  --text-hairline-1: 16px;
+  --text-hairline-2: 12px;
+}
+
+/*  استایل‌های ترکیبی با @utility */
+@utility hairline-1 {
+  font-family: var(--font-body);
+  font-size: var(--text-hairline-1);
+  line-height: 26px;
+  font-weight: var(--font-weight-regular);
+}
+
+@utility hairline-2 {
+  font-family: var(--font-body);
+  font-size: var(--text-hairline-2);
+  line-height: 20px;
+  font-weight: var(--font-weight-semi);
+}
+/* --- مهم: اطمینان از لود فونت‌ها در CSS --- */
+.font-hero {
+  font-family: var(--font-hero);
+}
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* ------ */
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+.hero-users img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  margin-left: -6px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+
+/* Brand Slider & Work Together Animation */
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-slide,
+.animate-slide-work {
+  animation: slide 15s linear infinite;
+}
+
+.animate-slide:hover {
+  animation-play-state: paused;
+}
+
+/* Number Section */
+.nums {
+  background-image: url('/image/num-background.webp');
+}
+
+.main-services-links li a span {
+  transition: all ease 0.4s;
+  -webkit-transition: all ease 0.4s;
+  -moz-transition: all ease 0.4s;
+  -ms-transition: all ease 0.4s;
+  -o-transition: all ease 0.4s;
+}
+.main-services-links li a:hover span {
+  background-color: var(--color-blue);
+}
+
+/* Contact us banner */
+.contact-us-banner {
+  background-image: url('/image/footer-background.webp');
+  background-repeat: repeat;
+  overflow: hidden;
+  object-fit: contain;
+  object-position: center center;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
+/* Footer */
+footer li a img {
+  transition: all ease 0.4s;
+  -webkit-transition: all ease 0.4s;
+  -moz-transition: all ease 0.4s;
+  -ms-transition: all ease 0.4s;
+  -o-transition: all ease 0.4s;
+}
+footer li a:hover span {
+  background-color: white;
+}
+
+footer div ul li:last-child {
+  border-bottom: none !important;
+}
+
+.copyright h6 a {
+  transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+}
+.copyright h6 a:hover {
+  color: #fff;
+}
+
+/* Form in contact-us.html  */
+input {
+  background-color: black;
+  color: white;
+}
+
+/* stay dark in autofill */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px black inset !important;
+  -webkit-text-fill-color: white !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Selection */
+::selection {
+  background-color: #7e2fd3;
+  color: #000;
+}
